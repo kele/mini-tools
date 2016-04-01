@@ -18,5 +18,6 @@ files = os.listdir(maindir)
 with Pool(processes=8) as pool:
     print("Running {}".format(command))
     pool.map(run, files)
+    pool.close()
     pool.join()
 
